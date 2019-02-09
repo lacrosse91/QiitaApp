@@ -26,10 +26,10 @@ class ArticleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func bindDataCell() {
+    func bindDataCell(title: String) {
         // 引数にArticleオブジェクトを受け取って、cellの作成を行います.
         // 現状まだ引数をいれずに適当な値を入れています.
-        titleLabel.text = "test"
+        titleLabel.text = title
         dateLabel.text = "date"
         userLabel.text = "user"
 
