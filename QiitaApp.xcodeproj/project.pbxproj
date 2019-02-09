@@ -14,11 +14,24 @@
 		D300BDAA220EB25600B78FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D300BDA8220EB25600B78FB8 /* LaunchScreen.storyboard */; };
 		D300BDB5220EB25600B78FB8 /* QiitaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDB4220EB25600B78FB8 /* QiitaAppTests.swift */; };
 		D300BDC0220EB25600B78FB8 /* QiitaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDBF220EB25600B78FB8 /* QiitaAppUITests.swift */; };
-		D300BDCF220EB51D00B78FB8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D300BDCE220EB51C00B78FB8 /* RxSwift.framework */; };
-		D300BDD1220EB53D00B78FB8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D300BDD0220EB53D00B78FB8 /* RxCocoa.framework */; };
 		D300BDD9220EB9AA00B78FB8 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDD8220EB9AA00B78FB8 /* ArticleViewController.swift */; };
 		D300BDDC220EBAD100B78FB8 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDDA220EBAD100B78FB8 /* ArticleTableViewCell.swift */; };
 		D300BDDD220EBAD100B78FB8 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D300BDDB220EBAD100B78FB8 /* ArticleTableViewCell.xib */; };
+		D3CE7576220F8A4E00643817 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7575220F8A4E00643817 /* Alamofire.framework */; };
+		D3CE7578220F8A5C00643817 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7577220F8A5C00643817 /* RealmSwift.framework */; };
+		D3CE757A220F8A6B00643817 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7579220F8A6B00643817 /* SDWebImage.framework */; };
+		D3CE757C220F8A7F00643817 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE757B220F8A7F00643817 /* Result.framework */; };
+		D3CE757E220F8A8B00643817 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE757D220F8A8B00643817 /* BrightFutures.framework */; };
+		D3CE757F220F8C1400643817 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE757D220F8A8B00643817 /* BrightFutures.framework */; };
+		D3CE7580220F8C1400643817 /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE757D220F8A8B00643817 /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3CE7582220F8C1900643817 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE757B220F8A7F00643817 /* Result.framework */; };
+		D3CE7583220F8C1900643817 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE757B220F8A7F00643817 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3CE7584220F8C1D00643817 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7579220F8A6B00643817 /* SDWebImage.framework */; };
+		D3CE7585220F8C1D00643817 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7579220F8A6B00643817 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3CE7586220F8C2100643817 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7577220F8A5C00643817 /* RealmSwift.framework */; };
+		D3CE7587220F8C2100643817 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7577220F8A5C00643817 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3CE7588220F8C2600643817 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7575220F8A4E00643817 /* Alamofire.framework */; };
+		D3CE7589220F8C2600643817 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE7575220F8A4E00643817 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +51,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D3CE7581220F8C1400643817 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3CE7580220F8C1400643817 /* BrightFutures.framework in Embed Frameworks */,
+				D3CE7585220F8C1D00643817 /* SDWebImage.framework in Embed Frameworks */,
+				D3CE7587220F8C2100643817 /* RealmSwift.framework in Embed Frameworks */,
+				D3CE7589220F8C2600643817 /* Alamofire.framework in Embed Frameworks */,
+				D3CE7583220F8C1900643817 /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D300BD9C220EB25500B78FB8 /* QiitaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D300BD9F220EB25500B78FB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,11 +83,14 @@
 		D300BDBB220EB25600B78FB8 /* QiitaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D300BDBF220EB25600B78FB8 /* QiitaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAppUITests.swift; sourceTree = "<group>"; };
 		D300BDC1220EB25600B78FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D300BDCE220EB51C00B78FB8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		D300BDD0220EB53D00B78FB8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		D300BDD8220EB9AA00B78FB8 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		D300BDDA220EBAD100B78FB8 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		D300BDDB220EBAD100B78FB8 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		D3CE7575220F8A4E00643817 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D3CE7577220F8A5C00643817 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		D3CE7579220F8A6B00643817 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		D3CE757B220F8A7F00643817 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		D3CE757D220F8A8B00643817 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +98,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D300BDD1220EB53D00B78FB8 /* RxCocoa.framework in Frameworks */,
-				D300BDCF220EB51D00B78FB8 /* RxSwift.framework in Frameworks */,
+				D3CE7584220F8C1D00643817 /* SDWebImage.framework in Frameworks */,
+				D3CE757E220F8A8B00643817 /* BrightFutures.framework in Frameworks */,
+				D3CE7586220F8C2100643817 /* RealmSwift.framework in Frameworks */,
+				D3CE7588220F8C2600643817 /* Alamofire.framework in Frameworks */,
+				D3CE7582220F8C1900643817 /* Result.framework in Frameworks */,
+				D3CE757C220F8A7F00643817 /* Result.framework in Frameworks */,
+				D3CE757A220F8A6B00643817 /* SDWebImage.framework in Frameworks */,
+				D3CE757F220F8C1400643817 /* BrightFutures.framework in Frameworks */,
+				D3CE7578220F8A5C00643817 /* RealmSwift.framework in Frameworks */,
+				D3CE7576220F8A4E00643817 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +188,11 @@
 		D300BDCD220EB51C00B78FB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D300BDD0220EB53D00B78FB8 /* RxCocoa.framework */,
-				D300BDCE220EB51C00B78FB8 /* RxSwift.framework */,
+				D3CE757D220F8A8B00643817 /* BrightFutures.framework */,
+				D3CE757B220F8A7F00643817 /* Result.framework */,
+				D3CE7579220F8A6B00643817 /* SDWebImage.framework */,
+				D3CE7577220F8A5C00643817 /* RealmSwift.framework */,
+				D3CE7575220F8A4E00643817 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +246,7 @@
 				D300BD99220EB25500B78FB8 /* Frameworks */,
 				D300BD9A220EB25500B78FB8 /* Resources */,
 				D300BDD2220EB61200B78FB8 /* ShellScript */,
+				D3CE7581220F8C1400643817 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,8 +373,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
 			);
 			outputFileListPaths = (
 			);

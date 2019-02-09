@@ -1,7 +1,5 @@
-github "ReactiveX/RxSwift" ~> 4.0
-github "SwiftyJSON/SwiftyJSON"    
 github "Thomvis/BrightFutures"
 github "rs/SDWebImage"
 github "realm/realm-cocoa"
-github "ishkawa/APIKit" ~> 3.0
+github "Alamofire/Alamofire" "5.0.0-beta.2"
 
