@@ -16,6 +16,9 @@
 		D300BDC0220EB25600B78FB8 /* QiitaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDBF220EB25600B78FB8 /* QiitaAppUITests.swift */; };
 		D300BDCF220EB51D00B78FB8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D300BDCE220EB51C00B78FB8 /* RxSwift.framework */; };
 		D300BDD1220EB53D00B78FB8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D300BDD0220EB53D00B78FB8 /* RxCocoa.framework */; };
+		D300BDD9220EB9AA00B78FB8 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDD8220EB9AA00B78FB8 /* ArticleViewController.swift */; };
+		D300BDDC220EBAD100B78FB8 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDDA220EBAD100B78FB8 /* ArticleTableViewCell.swift */; };
+		D300BDDD220EBAD100B78FB8 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D300BDDB220EBAD100B78FB8 /* ArticleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		D300BDC1220EB25600B78FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D300BDCE220EB51C00B78FB8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D300BDD0220EB53D00B78FB8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D300BDD8220EB9AA00B78FB8 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		D300BDDA220EBAD100B78FB8 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		D300BDDB220EBAD100B78FB8 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +111,14 @@
 			isa = PBXGroup;
 			children = (
 				D300BD9F220EB25500B78FB8 /* AppDelegate.swift */,
+				D300BDD6220EB8DA00B78FB8 /* ViewController */,
+				D300BDD5220EB8C500B78FB8 /* ViewModel */,
+				D300BDD4220EB8B000B78FB8 /* TableViewCell */,
+				D300BDD3220EB8A100B78FB8 /* Model */,
 				D300BDA1220EB25500B78FB8 /* ViewController.swift */,
 				D300BDA3220EB25500B78FB8 /* Main.storyboard */,
 				D300BDA6220EB25600B78FB8 /* Assets.xcassets */,
+				D300BDD7220EB8EA00B78FB8 /* Storyboards */,
 				D300BDA8220EB25600B78FB8 /* LaunchScreen.storyboard */,
 				D300BDAB220EB25600B78FB8 /* Info.plist */,
 			);
@@ -141,6 +152,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D300BDD3220EB8A100B78FB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D300BDD4220EB8B000B78FB8 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D300BDDA220EBAD100B78FB8 /* ArticleTableViewCell.swift */,
+				D300BDDB220EBAD100B78FB8 /* ArticleTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		D300BDD5220EB8C500B78FB8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D300BDD6220EB8DA00B78FB8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D300BDD8220EB9AA00B78FB8 /* ArticleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D300BDD7220EB8EA00B78FB8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +200,7 @@
 				D300BD98220EB25500B78FB8 /* Sources */,
 				D300BD99220EB25500B78FB8 /* Frameworks */,
 				D300BD9A220EB25500B78FB8 /* Resources */,
+				D300BDD2220EB61200B78FB8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -245,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D300BDDD220EBAD100B78FB8 /* ArticleTableViewCell.xib in Resources */,
 				D300BDAA220EB25600B78FB8 /* LaunchScreen.storyboard in Resources */,
 				D300BDA7220EB25600B78FB8 /* Assets.xcassets in Resources */,
 				D300BDA5220EB25500B78FB8 /* Main.storyboard in Resources */,
@@ -267,12 +318,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D300BDD2220EB61200B78FB8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D300BD98220EB25500B78FB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D300BDDC220EBAD100B78FB8 /* ArticleTableViewCell.swift in Sources */,
 				D300BDA2220EB25500B78FB8 /* ViewController.swift in Sources */,
+				D300BDD9220EB9AA00B78FB8 /* ArticleViewController.swift in Sources */,
 				D300BDA0220EB25500B78FB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
