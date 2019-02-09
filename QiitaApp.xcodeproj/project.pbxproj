@@ -14,6 +14,8 @@
 		D300BDAA220EB25600B78FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D300BDA8220EB25600B78FB8 /* LaunchScreen.storyboard */; };
 		D300BDB5220EB25600B78FB8 /* QiitaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDB4220EB25600B78FB8 /* QiitaAppTests.swift */; };
 		D300BDC0220EB25600B78FB8 /* QiitaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300BDBF220EB25600B78FB8 /* QiitaAppUITests.swift */; };
+		D300BDCF220EB51D00B78FB8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D300BDCE220EB51C00B78FB8 /* RxSwift.framework */; };
+		D300BDD1220EB53D00B78FB8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D300BDD0220EB53D00B78FB8 /* RxCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		D300BDBB220EB25600B78FB8 /* QiitaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D300BDBF220EB25600B78FB8 /* QiitaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAppUITests.swift; sourceTree = "<group>"; };
 		D300BDC1220EB25600B78FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D300BDCE220EB51C00B78FB8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D300BDD0220EB53D00B78FB8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D300BDD1220EB53D00B78FB8 /* RxCocoa.framework in Frameworks */,
+				D300BDCF220EB51D00B78FB8 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				D300BDB3220EB25600B78FB8 /* QiitaAppTests */,
 				D300BDBE220EB25600B78FB8 /* QiitaAppUITests */,
 				D300BD9D220EB25500B78FB8 /* Products */,
+				D300BDCD220EB51C00B78FB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +130,15 @@
 				D300BDC1220EB25600B78FB8 /* Info.plist */,
 			);
 			path = QiitaAppUITests;
+			sourceTree = "<group>";
+		};
+		D300BDCD220EB51C00B78FB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D300BDD0220EB53D00B78FB8 /* RxCocoa.framework */,
+				D300BDCE220EB51C00B78FB8 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +450,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 652A8TH8HY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QiitaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +472,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 652A8TH8HY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QiitaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
