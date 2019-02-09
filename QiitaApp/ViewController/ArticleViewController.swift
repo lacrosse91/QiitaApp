@@ -44,6 +44,7 @@ extension ArticleViewController: UITableViewDelegate, UITableViewDataSource {
     // draw the tableCells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ArticleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell") as! ArticleTableViewCell
+        cell.bindDataCell()
         return cell
     }
 }
