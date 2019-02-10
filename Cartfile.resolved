@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "5.0.0-beta.2"
 github "Thomvis/BrightFutures" "7.0.0"
 github "antitypical/Result" "4.1.0"
+github "ishkawa/APIKit" "4.0.0"
 github "realm/realm-cocoa" "v3.13.1"
 github "rs/SDWebImage" "4.4.5"

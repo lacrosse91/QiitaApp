@@ -7,27 +7,26 @@
 //
 
 import Foundation
-import Alamofire
+import APIKit
+import BrightFutures
 
 struct APIManager {
-    static func qiitaRequest(){
-        let url: URL = URL(string: "http://qiita.com/api/v2/items")!
-        let task: URLSessionTask  = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [Any] //この部分を書き換える
-                print(json)
-                print("count: \(json.count)")
-            }
-            catch {
-                print(error)
 
-            }
-        })
-        task.resume()
+    static func send<T: QiitaRequest>(request: T, callbackQueue queue: CallbackQueue? = nil) -> Future<T.Response, SessionTaskError> {
 
+        let promise = Promise<T.Response, SessionTaskError>()
+
+        Session.send(request, callbackQueue: queue) { result in
+            switch result {
+            case let .success(data):
+                promise.success(data)
+
+            case let .failure(error):
+                promise.failure(error)
+            }
+        }
+
+        return promise.future
     }
 
-
-
-    
 }

@@ -12,20 +12,27 @@ import Alamofire
 class ArticleViewController: UIViewController {
 
 
+    private let viewmodel = ArticleViewModel()
 
-    var articles: [[String: Any]] = [] {
-        didSet {
-            tableView.reloadData()
+
+
+    private var articles: [Article] {
+        get {
+            return viewmodel.articles
+        }
+        set(newValue) {
+            viewmodel.articles = newValue
         }
     }
+
 
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        initTableView()
-        fetchArticles()
 
+        initTableView()
+        load()
         // Do any additional setup after loading the view.
     }
 
@@ -35,24 +42,17 @@ class ArticleViewController: UIViewController {
     }
 
 
-    private func fetchArticles() {
-        guard let url: URL = URL(string: "http://qiita.com/api/v2/items") else { return }
-        let task: URLSessionTask  = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
-            do {
-                guard let data = data else { return } // guard letに書き換え
-                guard let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [Any] else { return } // guard letに書き換え
-                let articles = json.flatMap { (article) -> [String: Any]? in
-                    return article as? [String: Any]
-                } // flatMapに書き換え
-                DispatchQueue.main.async() { () -> Void in
-                    self.articles = articles
-                }
+
+    private func load() {
+        viewmodel.fetchArticles()
+            .onSuccess { [weak self] data in
+                self?.articles = data
+                self?.tableView.reloadData()
+                print(data)
             }
-            catch {
-                print(error)
-            }
-        })
-        task.resume()
+            .onFailure { [weak self] error in
+                print("errorrrr")
+        }
     }
     
 
@@ -82,8 +82,7 @@ extension ArticleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ArticleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell") as! ArticleTableViewCell
         let article = articles[indexPath.row] //追加
-        let title = article["title"] as! String //追加
-        cell.bindDataCell(title: title) //変更
+        cell.bindDataCell(article: article) //変更
         return cell
     }
 
@@ -92,9 +91,14 @@ extension ArticleViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension ArticleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("section: \(indexPath.section) index: \(indexPath.row)")
+        let storyboard: UIStoryboard = UIStoryboard(name: "ArticleDetail", bundle: nil)
+        if let next: ArticleDetailViewController = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController {
+            next.article = articles[indexPath.row]
+            navigationController?.pushViewController(next, animated: true)
+        }
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

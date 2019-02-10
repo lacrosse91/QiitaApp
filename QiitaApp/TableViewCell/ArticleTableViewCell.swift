@@ -26,14 +26,14 @@ class ArticleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func bindDataCell(title: String) {
+    func bindDataCell(article: Article) {
         // 引数にArticleオブジェクトを受け取って、cellの作成を行います.
         // 現状まだ引数をいれずに適当な値を入れています.
-        titleLabel.text = title
-        dateLabel.text = "date"
-        userLabel.text = "user"
+        titleLabel.text = article.title
+        dateLabel.text = article.date
+        userLabel.text = article.user.id
 
-        thumbImageView.sd_setImage(with: URL(string: "https://i.vimeocdn.com/portrait/58832_300x300"), placeholderImage: UIImage(named: "Image.png"))
+        thumbImageView.sd_setImage(with: URL(string: article.user.imageUrl), placeholderImage: UIImage(named: "Image.png"))
 
 
 
