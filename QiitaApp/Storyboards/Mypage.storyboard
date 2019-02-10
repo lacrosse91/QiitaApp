@@ -10,26 +10,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mypage View Controller-->
+        <!--マイページ-->
         <scene sceneID="Tdv-xF-Wbj">
             <objects>
-                <viewController id="J7Q-bJ-REj" customClass="MypageViewController" customModule="QiitaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Mypage" id="J7Q-bJ-REj" customClass="MypageViewController" customModule="QiitaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Sp-yl-epX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mypage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfh-n7-WLW">
-                                <rect key="frame" x="109" y="150" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xt7-tp-cI2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wiE-PM-AFh" customClass="ArticleTableViewCell" customModule="QiitaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wiE-PM-AFh" id="Mjl-Hy-oSd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="J7Q-bJ-REj" id="4ZB-DS-Asw"/>
+                                    <outlet property="delegate" destination="J7Q-bJ-REj" id="eJf-Sp-UGj"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oht-BJ-RxF" firstAttribute="bottom" secondItem="Xt7-tp-cI2" secondAttribute="bottom" id="W43-bH-0oi"/>
+                            <constraint firstItem="Xt7-tp-cI2" firstAttribute="top" secondItem="Oht-BJ-RxF" secondAttribute="top" id="XVz-oB-dKx"/>
+                            <constraint firstItem="Oht-BJ-RxF" firstAttribute="trailing" secondItem="Xt7-tp-cI2" secondAttribute="trailing" id="Xzz-oL-j0O"/>
+                            <constraint firstItem="Xt7-tp-cI2" firstAttribute="leading" secondItem="Oht-BJ-RxF" secondAttribute="leading" id="yug-GR-Xe6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Oht-BJ-RxF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ps2-M4-re2"/>
+                    <navigationItem key="navigationItem" title="マイページ" id="ps2-M4-re2"/>
+                    <connections>
+                        <outlet property="tableView" destination="Xt7-tp-cI2" id="OjX-HB-vjk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKa-N8-Xau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

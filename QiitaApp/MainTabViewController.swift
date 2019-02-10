@@ -19,7 +19,6 @@ class MainTabViewController: UITabBarController {
         let articleViewController = articleStoryboard.instantiateInitialViewController() as! UINavigationController
         let mypageViewController = mypageStoryboard.instantiateInitialViewController() as! UINavigationController
         let viewControllers = [articleViewController, mypageViewController]
-//        let viewControllers = [articleViewController]
         self.setViewControllers(viewControllers, animated: false)
 
         // Do any additional setup after loading the view.
