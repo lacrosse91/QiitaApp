@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xCG-2B-33y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ホーム-->
+        <scene sceneID="x7I-X0-oxE">
+            <objects>
+                <viewController storyboardIdentifier="Artiicle" automaticallyAdjustsScrollViewInsets="NO" id="ygG-bn-IBh" customClass="ArticleViewController" customModule="QiitaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E3y-jF-wT0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1KA-oe-Rfg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="U0V-IO-qfX" customClass="ArticleTableViewCell" customModule="QiitaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U0V-IO-qfX" id="Q6w-hZ-NCt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ygG-bn-IBh" id="p2d-ZV-SYb"/>
+                                    <outlet property="delegate" destination="ygG-bn-IBh" id="633-9k-uec"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4sY-0o-kBs" firstAttribute="trailing" secondItem="1KA-oe-Rfg" secondAttribute="trailing" id="OwQ-Ir-pZs"/>
+                            <constraint firstItem="1KA-oe-Rfg" firstAttribute="leading" secondItem="4sY-0o-kBs" secondAttribute="leading" id="SZa-Wz-Sr0"/>
+                            <constraint firstItem="1KA-oe-Rfg" firstAttribute="top" secondItem="4sY-0o-kBs" secondAttribute="top" id="aEU-ev-DyK"/>
+                            <constraint firstItem="4sY-0o-kBs" firstAttribute="bottom" secondItem="1KA-oe-Rfg" secondAttribute="bottom" id="uTn-8r-Iv8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4sY-0o-kBs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ホーム" id="MAZ-LA-XIA"/>
+                    <connections>
+                        <outlet property="tableView" destination="1KA-oe-Rfg" id="CRd-7K-cqe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LHk-eM-rfw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="-528"/>
+        </scene>
+        <!--ホーム-->
+        <scene sceneID="PXo-gL-fxw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xCG-2B-33y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ホーム" selectedImage="home" id="EdB-Jm-Wrl"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3d2-Gh-rC6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ygG-bn-IBh" kind="relationship" relationship="rootViewController" id="kKA-pf-RIx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEM-oq-4T0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="63" height="33"/>
+    </resources>
+</document>

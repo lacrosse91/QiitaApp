@@ -11,8 +11,10 @@ import UIKit
 class ArticleDetailViewController: UIViewController {
 
     var article: Article?
+    var isLikeButtonPush: Bool = false
 
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var likeButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,23 @@ class ArticleDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
+    @IBAction func likeButton(_ sender: UIButton) {
+
+        if (isLikeButtonPush) {
+            print("押された")
+//            likeButton.titleLabel?.text = "like"
+            likeButton.setTitle("unlike", for: .normal)
+            isLikeButtonPush = false
+        } else {
+            print("押された")
+//            likeButton.titleLabel?.text = "liked"
+            likeButton.setTitle("liked", for: .normal)
+            isLikeButtonPush = true
+
+        }
+    }
+
 
     /*
     // MARK: - Navigation

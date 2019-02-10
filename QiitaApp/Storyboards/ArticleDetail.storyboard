@@ -26,12 +26,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C45-6C-Xph">
+                                <rect key="frame" x="272" y="558" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="unlike"/>
+                                <connections>
+                                    <action selector="likeButton:" destination="AGq-bn-6zu" eventType="touchUpInside" id="5nn-DM-eN7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5j3-e2-vCM"/>
                     </view>
                     <connections>
                         <outlet property="bodyTextView" destination="UAr-0j-xFn" id="Ebq-9h-U1F"/>
+                        <outlet property="likeButton" destination="C45-6C-Xph" id="3of-Oz-ie9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFp-3q-SHD" userLabel="First Responder" sceneMemberID="firstResponder"/>

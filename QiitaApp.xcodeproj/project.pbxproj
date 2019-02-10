@@ -43,6 +43,10 @@
 		D3CE759D220FE9CA00643817 /* JSONDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE759C220FE9CA00643817 /* JSONDataParser.swift */; };
 		D3CE759F220FF14400643817 /* ArticleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CE759E220FF14400643817 /* ArticleDetail.storyboard */; };
 		D3CE75A1220FF17500643817 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE75A0220FF17500643817 /* ArticleDetailViewController.swift */; };
+		D3CE75A32210015600643817 /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CE75A22210015600643817 /* Article.storyboard */; };
+		D3CE75A52210035F00643817 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE75A42210035F00643817 /* MainTabViewController.swift */; };
+		D3CE75A7221009B600643817 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CE75A6221009B600643817 /* Mypage.storyboard */; };
+		D3CE75A9221009F200643817 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE75A8221009F200643817 /* MypageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +116,10 @@
 		D3CE759C220FE9CA00643817 /* JSONDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataParser.swift; sourceTree = "<group>"; };
 		D3CE759E220FF14400643817 /* ArticleDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleDetail.storyboard; sourceTree = "<group>"; };
 		D3CE75A0220FF17500643817 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		D3CE75A22210015600643817 /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
+		D3CE75A42210035F00643817 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		D3CE75A6221009B600643817 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		D3CE75A8221009F200643817 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +190,7 @@
 				D300BDD4220EB8B000B78FB8 /* TableViewCell */,
 				D300BDD3220EB8A100B78FB8 /* Model */,
 				D300BDA1220EB25500B78FB8 /* ViewController.swift */,
+				D3CE75A42210035F00643817 /* MainTabViewController.swift */,
 				D300BDA3220EB25500B78FB8 /* Main.storyboard */,
 				D300BDA6220EB25600B78FB8 /* Assets.xcassets */,
 				D300BDD7220EB8EA00B78FB8 /* Storyboards */,
@@ -252,6 +261,7 @@
 			children = (
 				D300BDD8220EB9AA00B78FB8 /* ArticleViewController.swift */,
 				D3CE75A0220FF17500643817 /* ArticleDetailViewController.swift */,
+				D3CE75A8221009F200643817 /* MypageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -260,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				D3CE759E220FF14400643817 /* ArticleDetail.storyboard */,
+				D3CE75A22210015600643817 /* Article.storyboard */,
+				D3CE75A6221009B600643817 /* Mypage.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -382,6 +394,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D300BDDD220EBAD100B78FB8 /* ArticleTableViewCell.xib in Resources */,
+				D3CE75A7221009B600643817 /* Mypage.storyboard in Resources */,
+				D3CE75A32210015600643817 /* Article.storyboard in Resources */,
 				D300BDAA220EB25600B78FB8 /* LaunchScreen.storyboard in Resources */,
 				D3CE759F220FF14400643817 /* ArticleDetail.storyboard in Resources */,
 				D300BDA7220EB25600B78FB8 /* Assets.xcassets in Resources */,
@@ -439,8 +453,10 @@
 				D3CE758E220F927B00643817 /* QiitaRequest.swift in Sources */,
 				D3CE759D220FE9CA00643817 /* JSONDataParser.swift in Sources */,
 				D300BDDC220EBAD100B78FB8 /* ArticleTableViewCell.swift in Sources */,
+				D3CE75A9221009F200643817 /* MypageViewController.swift in Sources */,
 				D3CE7590220F9CEC00643817 /* Article.swift in Sources */,
 				D3CE7597220FE22000643817 /* GetArticlesRequest.swift in Sources */,
+				D3CE75A52210035F00643817 /* MainTabViewController.swift in Sources */,
 				D300BDA2220EB25500B78FB8 /* ViewController.swift in Sources */,
 				D3CE758C220F926200643817 /* APIManager.swift in Sources */,
 				D3CE7599220FE5A100643817 /* ArticleViewModel.swift in Sources */,
