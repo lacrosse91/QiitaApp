@@ -47,6 +47,7 @@
 		D3CE75A52210035F00643817 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE75A42210035F00643817 /* MainTabViewController.swift */; };
 		D3CE75A7221009B600643817 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CE75A6221009B600643817 /* Mypage.storyboard */; };
 		D3CE75A9221009F200643817 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE75A8221009F200643817 /* MypageViewController.swift */; };
+		D3CE75AB2210121100643817 /* RealmArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE75AA2210121100643817 /* RealmArticle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		D3CE75A42210035F00643817 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		D3CE75A6221009B600643817 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		D3CE75A8221009F200643817 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		D3CE75AA2210121100643817 /* RealmArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmArticle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				D3CE758F220F9CEC00643817 /* Article.swift */,
+				D3CE75AA2210121100643817 /* RealmArticle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				D3CE7599220FE5A100643817 /* ArticleViewModel.swift in Sources */,
 				D300BDD9220EB9AA00B78FB8 /* ArticleViewController.swift in Sources */,
 				D300BDA0220EB25500B78FB8 /* AppDelegate.swift in Sources */,
+				D3CE75AB2210121100643817 /* RealmArticle.swift in Sources */,
 				D3CE75A1220FF17500643817 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

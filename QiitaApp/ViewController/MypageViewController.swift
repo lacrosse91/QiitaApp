@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MypageViewController: UIViewController {
 
@@ -14,23 +15,30 @@ class MypageViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-
-    private var articles: [Article] {
-        get {
-            return viewmodel.articles
-        }
-        set(newValue) {
-            viewmodel.articles = newValue
+    var likedArticles: Results<RealmArticle>?{
+        didSet {
+            tableView.reloadData()
         }
     }
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initTableView()
-        load()
-        // Do any additional setup after loading the view.
+
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // デフォルトRealmを取得
+        let realm = try! Realm()
+        // 一覧を取得：金額を条件に、登録日時が新しい順でソート
+        self.likedArticles = realm.objects(RealmArticle.self)
+    }
+
+
+
 
     private func initTableView() {
         tableView.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleTableViewCell")
@@ -38,19 +46,6 @@ class MypageViewController: UIViewController {
     }
 
 
-
-    private func load() {
-        viewmodel.fetchArticles()
-            .onSuccess { [weak self] data in
-                self?.articles = data
-                self?.tableView.reloadData()
-                print(data)
-            }
-            .onFailure { [weak self] error in
-                print("errorrrr")
-        }
-    }
-    
     
 
     /*
@@ -71,13 +66,13 @@ extension MypageViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.count //変更
+        return likedArticles?.count ?? 0 //変更
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ArticleTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell") as! ArticleTableViewCell
-        let article = articles[indexPath.row] //追加
-        cell.bindDataCell(article: article) //変更
+        let likeArticle = likedArticles![indexPath.row]
+        cell.bindDataCell(article: likeArticle)
         return cell
     }
 

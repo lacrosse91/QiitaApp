@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
+         全てのモデルオブジェクトを一括削除
+         */
+        do {
+            let realm = try Realm()
+            try! realm.write {
+                realm.deleteAll() //全てのモデルオブジェクトを削除
+            }
+        } catch {
+        }
 
         // Arrayにした方がきれいに見えそうです...
         let articleStoryboard = UIStoryboard(name: "Article", bundle: nil)

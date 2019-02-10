@@ -7,11 +7,12 @@
 //
 
 import UIKit
-
+import RealmSwift
 class ArticleDetailViewController: UIViewController {
 
     var article: Article?
     var isLikeButtonPush: Bool = false
+    var likedArticle = RealmArticle()
 
     @IBOutlet weak var bodyTextView: UITextView!
     @IBOutlet weak var likeButton: UIButton!
@@ -30,14 +31,44 @@ class ArticleDetailViewController: UIViewController {
 
         if (isLikeButtonPush) {
             print("押された")
-//            likeButton.titleLabel?.text = "like"
             likeButton.setTitle("unlike", for: .normal)
             isLikeButtonPush = false
+            /*
+             モデルオブジェクトの削除
+             */
+            do {
+                let realm = try Realm()
+
+                try! realm.write {
+                    realm.delete(likedArticle)
+                }
+            } catch {
+            }
+
         } else {
             print("押された")
-//            likeButton.titleLabel?.text = "liked"
             likeButton.setTitle("liked", for: .normal)
             isLikeButtonPush = true
+            do {
+                let realm = try Realm()
+
+                likedArticle.title = article!.title
+                likedArticle.body = article!.body
+                likedArticle.date = article!.date
+                likedArticle.imageUrl = article!.user.imageUrl
+                likedArticle.user = article!.user.id
+
+
+                try! realm.write {
+                    realm.add(likedArticle)
+                    print("成功だよ", likedArticle)
+
+                }
+
+            } catch {
+                print("エラーだよ")
+
+            }
 
         }
     }
